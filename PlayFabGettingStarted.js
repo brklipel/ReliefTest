@@ -24,7 +24,7 @@ var LoginCallback = function (result, error) {
 
 function DoExampleGetLeaderboard(){
     PlayFab.settings.titleId = document.getElementById("titleId").value;
-	PlayFab.settings.developerSecretKey = "A61W9RSK9O3TDDBTUES7DTRBWYG3U317HJ4OB3PH51Q3IFSCB7";
+    //PlayFab.settings.developerSecretKey = "A61W9RSK9O3TDDBTUES7DTRBWYG3U317HJ4OB3PH51Q3IFSCB7";
     var getLeaderboardRequest = {
         // Currently, you need to look up the correct format for this object in the API-docs:
         // https://api.playfab.com/documentation/Client/method/LoginWithCustomID
