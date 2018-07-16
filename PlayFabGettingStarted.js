@@ -8,7 +8,7 @@ var GetLeaderboardCallback = function (result, error) {
 		players = result.data;
 		
 		var __string = "";
-		
+			
 		__string += "<tr><th>Position</th><th>Name</th><th>Score</th></tr>"
 		var i = 0;
 		for(i = 0; i < players.Leaderboard.length; i++)
@@ -22,9 +22,7 @@ var GetLeaderboardCallback = function (result, error) {
 		var n = d.getTime();
 
 		myHTML += '<span class="test">'+ n +'<br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
-		wrapper.innerHTML = myHTML;
-		
-		//setTimeout(DoExampleGetLeaderboard(), 5000);
+		wrapper.innerHTML = myHTML;			
     } 
 	else if (error !== null) {
         document.getElementById("resultOutput").innerHTML =
@@ -32,6 +30,13 @@ var GetLeaderboardCallback = function (result, error) {
             "Here's some debug information:\n" +
             PlayFab.GenerateErrorReport(error);
     }
+}
+
+function StartLoad()
+{
+	DoExampleGetLeaderboard();
+	
+	setInterval(DoExampleGetLeaderboard(), 5000);
 }
 
 function DoExampleGetLeaderboard(){
