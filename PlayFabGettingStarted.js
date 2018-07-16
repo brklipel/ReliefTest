@@ -24,7 +24,7 @@ var GetLeaderboardCallback = function (result, error) {
 		myHTML += '<span class="test">'+ n +'<br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
 		wrapper.innerHTML = myHTML;
 		
-		setTimeout(DoExampleGetLeaderboard(), 5000);
+		//setTimeout(DoExampleGetLeaderboard(), 5000);
     } 
 	else if (error !== null) {
         document.getElementById("resultOutput").innerHTML =
