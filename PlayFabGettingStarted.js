@@ -18,7 +18,10 @@ var GetLeaderboardCallback = function (result, error) {
 			__string += "<tr>" + "<td>" + (__player.Position + 1) + "</td>" + "<td>" + __player.DisplayName + "</td>" + "<td>" + __player.StatValue + "</td></tr>";			
 		}
 		
-		myHTML += '<span class="test"><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';
+		var d = new Date();
+		var n = d.getTime();
+
+		myHTML += '<span class="test">'+ n +'<br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
 		wrapper.innerHTML = myHTML;
 		
 		setTimeout(DoExampleGetLeaderboard(), 5000);
