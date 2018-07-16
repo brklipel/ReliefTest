@@ -21,7 +21,7 @@ var GetLeaderboardCallback = function (result, error) {
 		var d = new Date();
 		var n = d.getTime();
 
-		myHTML += '<span class="test">'+ n +'<br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
+		myHTML += '<span class="test"><div align="center">'+ n +'</div><br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
 		wrapper.innerHTML = myHTML;			
     } 
 	else if (error !== null) {
@@ -40,7 +40,7 @@ function StartLoad()
 }
 
 function DoExampleGetLeaderboard(){
-    PlayFab.settings.titleId = document.getElementById("titleId").value;
+    PlayFab.settings.titleId = "BE5B";
 	PlayFab.settings.developerSecretKey = "A61W9RSK9O3TDDBTUES7DTRBWYG3U317HJ4OB3PH51Q3IFSCB7";
     var getLeaderboardRequest = {
 		StatisticName: "score",
