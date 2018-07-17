@@ -21,7 +21,7 @@ var GetLeaderboardCallback = function (result, error) {
 		var d = new Date();
 		var n = d.getTime();
 
-		myHTML += '<span class="test"><div align="center">'+ n +'</div><br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
+		myHTML += '<span class="test"><div align="center">'+ "" +'</div><br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
 		wrapper.innerHTML = myHTML;			
     } 
 	else if (error !== null) {
