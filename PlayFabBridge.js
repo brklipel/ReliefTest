@@ -8,17 +8,17 @@ var GetLeaderboardCallback = function (result, error) {
 		players = result.data;
 		
 		var __string = "";
-			
-		__string += "<tr><th>Position</th><th>Name</th><th>Score</th></tr>"
+		
+		__string += "<tr><th background="+"BarBlue.png"+">Position</th><th background="+"BarGreen.png"+">Name</th><th background="+"BarRed.png"+">Score</th></tr>"
 		var i = 0;
 		for(i = 0; i < players.Leaderboard.length; i++)
 		{
 			var __player = players.Leaderboard[i];
 			
-			__string += "<tr>" + "<td>" + (__player.Position + 1) + "</td>" + "<td>" + __player.DisplayName + "</td>" + "<td>" + __player.StatValue + "</td></tr>";			
+			__string += "<tr>" + "<td align="+"center"+" background="+"BarBlue.png"+">" + (__player.Position + 1) + "</td>" + "<td align="+"center"+" background="+"BarGreen.png"+">" + __player.DisplayName + "</td>" + "<td align="+"center"+" background="+"BarRed.png"+">" + __player.StatValue + "</td></tr>";			
 		}
 		
-		myHTML += '<span class="test"><br/><table border="1" width="90%" align="center">' + __string +'</table></span><br/><br/>';		
+		myHTML += '<span class="test"><br/><div align="center"><table width="90%" align="center"><img src="Bar.png" width="89.7%">' + __string +'</table></div></span><br/><br/>';		
 		wrapper.innerHTML = myHTML;			
     } 
 	else if (error !== null) {
